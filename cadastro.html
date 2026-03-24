@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="cadastro.css">
+
+</head>
+<body>
+
+<header>
+
+<h1>Crie sua conta</h1>
+
+<h3>preencha os dados abaixo para se cadastrar.</h3>
+
+<br>
+
+</header>
+
+<section>
+
+<form action="paginaprincipal.html" method="post" autocomplete="off">
+
+         <label for="nome">Nome</label>
+         <input type="text" id="nome" name="nome" required placeholder="Digite seu nome" minlength="3" maxlength="12" size="12"> <br><br>
+
+         <label for="H">Masculino</label>
+         <input type="radio" id="H" name="fav_language" value="H" required>
+
+         <label for="M">Feminino</label>
+         <input type="radio" id="M" name="fav_language" value="M" required><br><br>
+
+         <label for="email">E-mail</label>
+         <input type="email" id="email" name="email" required placeholder="Digite seu email"><br><br>
+
+         <label for="senha">Senha</label>
+         <input type="password" id="senha" name="senha" required placeholder="Crie sua senha" minlength="8" maxlength="12" size="12"> <button type="button" id="MostrarSenha">Mostrar</button>  <br><br>
+
+         <label for="confirmesuasenha">Confirme sua senha</label>
+         <input type="password" id="confirmesuasenha" name="confirmesuasenha" required placeholder="Repita sua senha" minlength="8" maxlength="12" size="12"> <button type="button" id="MostrarSenha">Mostrar</button>  <br><br>
+         
+         <button type="submit">Criar conta</button><br><br>
+
+</form>
+
+         <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+         <p><small>&copy; 2026 Breno Faislon Gonçalves. Todos os direitos reservados.</small></p>
+
+</footer>
+    
+</body>
+</html>

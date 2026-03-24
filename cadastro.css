@@ -1,0 +1,37 @@
+ * /* ConfiguraÃ§Ãĩes gerais */
+body {
+    font-family: Arial, sans-serif; /* Fonte */
+    margin: 0; /* Remove margens e padding padrÃĢo */
+    padding: 0; /* Remove margens e padding padrÃĢo */
+    background-color: #FDFBF7; /* Cor de fundo */
+   color: #000000; /* Cor do texto */
+}
+
+/* Estilo do Cabeçalho e Menu */
+header {
+    background-color:#F0E5D1; /* Cor de fundo do cabeçalho */
+    padding: 20px 0; /* Padding para dar espaÃ§o ao conteÃšdo do cabeÃ§alho */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+/* Estilo do Conteudo Principal */
+section {
+    box-sizing: border-box 80%; /* Inclui padding e border na largura total */
+    max-width: 800px; /* Largura da caixa */
+    margin: 40px auto; /* Centraliza a caixa */
+    padding: 20px; /* EspaÃ§amento interno */
+    background-color: #F0E5D1; /* Cor de fundo da caixa */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px #9D8461; /* Sombra para dar profundidade */
+    text-align: center; /* Centraliza o texto dentro da caixa */
+}
+
+
+/* Estilo do RodapÃĐ */
+footer {
+    text-align: center; /* Centraliza o texto do rodapÃĐ */
+    padding: 20px; /* Padding para dar espaÃ§o ao conteÃšdo do rodapÃĐ */
+    margin-top: 40px; /* EspaÃ§o acima do rodapÃĐ */
+    font-size: 14px; /* Tamanho da fonte do rodapÃĐ */
+    color: #498bd6; /* Cor do texto do rodapÃĐ */
+}
