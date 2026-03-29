@@ -1,0 +1,76 @@
+
+/* css do site pessoal so para ficar tudo em branco*/ 
+
+
+*/* Configurações gerais */
+body {
+    font-family: Arial, sans-serif; /* Fonte */
+    margin: 0; /* Remove margens e padding padrão */
+    padding: 0; /* Remove margens e padding padrão */
+    background-color: #0D1117; /* Cor de fundo */
+   color: #E6EDF3; /* Cor do texto */
+}
+
+h2 {
+    color: #E6EDF3; /* Cor do título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Estilo do Cabeçalho e Menu */
+header {
+    background-color: #30363D; /* Cor de fundo do cabeçalho */
+    padding: 20px 0; /* Padding para dar espaço ao conteúdo do cabeçalho */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0px; /* Remove o espaçamento da lista */
+    display: flex; /* organizar os links horizontalmente */
+    justify-content: center; /* Centraliza os links no menu */
+    gap: 20px; /* Espaço entre os links */
+}
+
+nav a {
+    color: #E6EDF3; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Deixa os links em negrito */
+    padding: 5px 10px; /* Padding para aumentar a área clicável */
+}
+
+nav a:hover {
+    background-color: #498bd6; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Deixa o fundo do link arredondado */
+}
+
+/* Estilo do Conteúdo Principal */
+section {
+    box-sizing: border-box 80%; /* Inclui padding e border na largura total */
+    max-width: 800px; /* Largura da caixa */
+    margin: 40px auto; /* Centraliza a caixa */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #30363D; /* Cor de fundo da caixa */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    text-align: center; /* Centraliza o texto dentro da caixa */
+}
+
+/* Estilo da Imagem */
+.foto {
+    border-radius: 40%; /* Deixa a foto redonda */
+    margin-bottom: 20px;/* margin para dar espaço em baixo da foto */
+    margin-top: 20px; /* margin para dar espaço em cima da foto */
+    border: 2px solid #E6EDF3; /* Borda ao redor da foto */
+    width: 250px; /* Largura da foto */
+    height: 300px; /* Altura da foto */
+}
+
+/* Estilo do Rodapé */
+footer {
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 20px; /* Padding para dar espaço ao conteúdo do rodapé */
+    margin-top: 40px; /* Espaço acima do rodapé */
+    font-size: 14px; /* Tamanho da fonte do rodapé */
+    color: #498bd6; /* Cor do texto do rodapé */
+}
