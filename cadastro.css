@@ -1,44 +1,119 @@
- * /* ConfiguraÃ§Ãĩes gerais */
-body {
+ * {
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    margin: 0; /* Remove margens e padding padrao */
+    padding: 0; /* Remove margens e padding padrao */
     font-family: Arial, sans-serif; /* Fonte */
-    margin: 0; /* Remove margens e padding padrÃĢo */
-    padding: 0; /* Remove margens e padding padrÃĢo */
-    background-color: #FDFBF7; /* Cor de fundo */
-   color: #000000; /* Cor do texto */
-}
+ }
+ 
+ 
+ /* Configurações gerais */
 
+body { 
+   background-image: url('livraria2.png');  /* Imagem de fundo */
+   background-size: cover;  /* Cobre toda a área da tela */
+   background-position: center;  /* Centraliza a imagem */
+   display: flex;  /* Organiza os elementos verticalmente */
+   justify-content: center;  /* Centraliza horizontalmente */
+   align-items: center;  /* Centraliza verticalmente */
+   min-height: 100vh;  /* Garante que o conteúdo ocupe toda a altura da tela */
 
-/* Estilo do Cabeçalho e Menu */
-header {
-    background-color:#F0E5D1; /* Cor de fundo do cabeçalho */
-    padding: 10px 0; /* Padding para dar espaÃ§o ao conteÃšdo do cabeÃ§alho */
-    text-align: center; /* Centraliza o texto do cabeçalho */
 }
 
 
 /* Estilo do Conteudo Principal */
-section {
-    box-sizing: border-box 80%; /* Inclui padding e border na largura total */
-    max-width: 600px; /* Largura da caixa */
-    margin: 40px auto; /* Centraliza a caixa */
-    padding: 20px; /* EspaÃ§amento interno */
-    background-color: #F0E5D1; /* Cor de fundo da caixa */
+
+.container {
+    max-width: 420px;  /* Largura da caixa */
+    background: transparent; /* Fundo transparente para mostrar a imagem de fundo */
     border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px #9D8461; /* Sombra para dar profundidade */
-    text-align: center; /* Centraliza o texto dentro da caixa */
+    border:2px solid rgba(255, 255, 255, .5); /* Cor da borda com transparência */
+    padding: 30px 40px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /* Sombra para dar profundidade */
+    
+}
+
+.container h1 {
+    font-size: 36px;  /* Tamanho da fonte do título */
+    text-align: center;  /* Centraliza o título */
+    
 }
 
 
-form{
-    gap: 15px;
+.input-box {
+    position: relative; /* Permite posicionar o ícone dentro do input */
+    margin: 30px 0; /* Espaçamento entre os inputs */
+    height: 50px; /* Altura do input */
+    width: 100%; /* O container do input ocupa toda a largura disponível */
 }
 
 
-/* Estilo do RodapÃĐ */
+.input-box input {
+ width: 100%; /* O input ocupa toda a largura do container */
+ height: 100%; /* O input ocupa toda a altura do container */
+ background-color: transparent; /* Fundo transparente para mostrar a imagem de fundo */
+ border: 2px solid rgba(255, 255, 255, .5); /* Cor da borda com transparência */
+ border-radius: 40px; /* Bordas arredondadas */
+ outline: none; /* Remove o contorno padrão ao focar */
+ font-size: 16px; /* Tamanho da fonte do input */
+ color: white; /* Cor do texto do input */
+ padding: 20px 45px 20px 20px; /* Espaçamento interno do input, com espaço para o ícone */
+
+}
+
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, .9); /* Cor do placeholder */
+}
+
+.input-box i{
+position: absolute; 
+right: 20px; 
+top: 50%; 
+font-size: 20px; 
+transform: translateY(-50%); 
+
+}
+
+.lembrar-senha input{
+    accent-color: white; /* Cor do checkbox */
+    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
+    margin: 5px; /* Espaçamento entre o checkbox e o texto */
+    
+}
+
+button {
+    width: 100%; /* O botão ocupa toda a largura do container */
+    padding: 15px; /* Espaçamento interno do botão */
+    background-color: #0073ff; /* Cor do botão */
+    border: none; /* Remove a borda */
+    border-radius: 40px; /* Bordas arredondadas */
+    color: white; /* Cor do texto do botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
+}
+
+.login a{
+    color: #3700ff; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado do link */     
+    margin: 5px; /* Espaçamento entre o link e o texto */
+}
+
+
+/* Estilo do Rodape */
+
 footer {
-    text-align: center; /* Centraliza o texto do rodapÃĐ */
-    padding: 20px; /* Padding para dar espaÃ§o ao conteÃšdo do rodapÃĐ */
-    margin-top: 40px; /* EspaÃ§o acima do rodapÃĐ */
-    font-size: 14px; /* Tamanho da fonte do rodapÃĐ */
-    color: #498bd6; /* Cor do texto do rodapÃĐ */
+    text-align: center; /* Centraliza o texto do rodape */
+    padding: 20px; /* Padding para dar espaço ao conteudo do rodape */
+    font-size: 14px; /* Tamanho da fonte do rodape */
+    color: #3182df; /* Cor do texto do rodape */
+    position: absolute; 
+    bottom: 0; 
+    
+}
+
+footer a {
+    text-decoration: none; /* Remove sublinhado do link */
+    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
+    color: #3700ff; /* Cor do link */
+    
 }

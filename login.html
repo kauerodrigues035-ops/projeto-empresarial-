@@ -7,41 +7,70 @@
     <title>Labirinto literário</title>
     <link rel="icon" href="icone livro.jpg">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'><!-- Link para os ícones do Boxicons -->
 
 </head>
 <body>
  
 <header>
 
-         <h1>Faça seu login</h1>
+<nav>
+        
+         <!-- navegação do site -->
+
+</nav>
 
 </header>
 
-<section>
+<main class="container">
+
+         <h1>Faça seu login</h1>
 
  <form action="index.html" method="post" autocomplete="off">
 
-         <label for="nome">Nome</label>
-         <input type="text" id="nome" name="nome" required placeholder="Insira seu Nome" minlength="3" maxlength="12" size="12"><br><br>
- 
-         <label for="email">E-mail</label>
-         <input type="email" id="email" name="email" required placeholder="Insira seu email"><br><br>
+    <div class="input-box">
 
-         <label for="senha">Senha</label>
-         <input type="password" id="senha" name="senha" required placeholder="Insira sua senha" minlength="8" maxlength="12" size="12"> <button accesskey="accesskey" type="button" id="btnMostrarSenha">Mostrar</button>  <br><br>
-         
-         <button type="submit">Entrar</button><br><br>
+         <input type="email" id="email" required placeholder="Insira seu email">
+         <i class="bx bx-envelope"></i> <br><br>
 
-         <a href="cadastro.html">Crie uma conta</a>
+    </div>
+
+    <div class="input-box">
+
+         <input type="password" id="senha" required placeholder="Insira sua senha" minlength="8" maxlength="12" size="12"> 
+         <i class="bx bx-lock"></i>  <br><br>
+
+    </div>       
+
+    <div class="lembrar-senha">    
+
+         <label>
+         <input type="checkbox" id="salvar-senha">
+         Lembrar senha
+         </label><br><br>
+
+    </div>         
+
+    <div>
+
+         <button type="submit" id="entrar">Login</button><br><br>
+
+    </div>
+
+    <div class="cadastro">
+
+         <p>Não tem uma conta?<a href="cadastro.html"> Cadastre-se</a></p>
+
+    </div>
 
  </form>
 
-</section>
-
+</main>
 
 <footer>
 
-         <p><small>&copy; 2026 Breno Faislon Gonçalves. Todos os direitos reservados.</small></p>
+         <p><small>&copy; 2026 Labirinto literário. Todos os direitos reservados.</small></p>
+         <p><small>Para descobrir mais sobre o nosso labirinto literário, visite nossa página sobre.<br><a href="sobre.html">Saiba mais</a></small></p>
 
 </footer>
 
