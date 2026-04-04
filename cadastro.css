@@ -71,15 +71,8 @@ right: 20px;
 top: 50%; 
 font-size: 20px; 
 transform: translateY(-50%); 
-
 }
 
-.lembrar-senha input{
-    accent-color: white; /* Cor do checkbox */
-    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
-    margin: 5px; /* Espaçamento entre o checkbox e o texto */
-    
-}
 
 button {
     width: 100%; /* O botão ocupa toda a largura do container */
