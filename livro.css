@@ -7,11 +7,13 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff; /* Fundo branco para aspecto profissional */
-    color: #0F1111; /* Cor de texto padrão e-commerce */
+    background-color: #fff;
+    /* Fundo branco para aspecto profissional */
+    color: #0F1111;
+    /* Cor de texto padrão e-commerce */
     display: grid;
     /* Define as 3 colunas e permite que as linhas se ajustem */
-    grid-template-columns: 350px 1fr 300px; 
+    grid-template-columns: 350px 1fr 300px;
     gap: 20px;
     padding: 20px;
     max-width: 1300px;
@@ -19,8 +21,9 @@ body {
 }
 
 /* 2. COLUNA 1: CARROSSEL (IMAGENS) */
-.imagens, .prev, .next, .dots {
-    grid-column: 1; /* Mantém na primeira coluna */
+.imagens {
+    grid-column: 1;
+    /* Mantém na primeira coluna */
     justify-self: center;
 }
 
@@ -43,27 +46,31 @@ body {
     display: block;
 }
 
-.prev, .next {
+
+.prev {
     cursor: pointer;
-    background: #f0f0f0;
-    border: 1px solid #adb1b8;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
     display: flex;
     justify-content: center;
-    margin: 10px 5px;
-  
-    
-    
+    align-items: center;
+    position: absolute;
+    left: -10px;
+
+}
+
+.next {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -10px;
+
 }
 
 .dots {
     display: flex;
     gap: 8px;
-    margin-top: 10px;
-    width: 100%;
-    justify-content: center;
+   
 }
 
 .dot {
@@ -83,6 +90,7 @@ body {
 .info-principal {
     grid-column: 2;
     padding: 0 20px;
+    
 }
 
 .info-principal h1 {
@@ -91,7 +99,8 @@ body {
 }
 
 #JK {
-    color: #007185; /* Azul link Amazon */
+    color: #007185;
+    /* Azul link Amazon */
     text-decoration: none;
     font-size: 14px;
 }
@@ -104,7 +113,7 @@ body {
 
 .info-principal p {
     line-height: 1.5;
-    font-size: 15px;
+    
 }
 
 /* 4. COLUNA 3: CAIXA DE COMPRA (ASIDE) */
@@ -123,7 +132,8 @@ aside {
 }
 
 .opcao input {
-    display: none; /* Esconde o rádio original */
+    display: none;
+    /* Esconde o rádio original */
 }
 
 .box {
@@ -134,13 +144,20 @@ aside {
     background-color: #F7FAFA;
 }
 
-.opcao input:checked + .box {
+.opcao input:checked+.box {
     border-color: #e77600;
     background-color: #fff5ec;
 }
 
-.box strong { display: block; font-size: 14px; }
-.box p { color: #B12704; font-weight: bold; }
+.box strong {
+    display: block;
+    font-size: 14px;
+}
+
+.box p {
+    color: #B12704;
+    font-weight: bold;
+}
 
 #estoque {
     color: #007600;
@@ -173,13 +190,27 @@ select {
     font-size: 14px;
 }
 
-.carrinho { background: #FFD814; border-color: #FCD200; }
-.comprar { background: #FFA41C; border-color: #FF8F00; }
-.lista { background: #edeff0; border-color: #D5D9D9; border-radius: 4px; margin-top: 10px;}
+.carrinho {
+    background: #FFD814;
+    border-color: #FCD200;
+}
+
+.comprar {
+    background: #FFA41C;
+    border-color: #FF8F00;
+}
+
+.lista {
+    background: #edeff0;
+    border-color: #D5D9D9;
+    border-radius: 4px;
+    margin-top: 10px;
+}
 
 /* 5. PARTE INFERIOR: DETALHES E TABELA */
 .detalhes-produto {
-    grid-column: 1 / -1; /* Ocupa as 3 colunas (largura total) */
+    grid-column: 1 / -1;
+    /* Ocupa as 3 colunas (largura total) */
     margin-top: 40px;
     border-top: 1px solid #eee;
     padding-top: 20px;
