@@ -1,45 +1,31 @@
-/* 1. CONFIGURAÇÕES GERAIS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fff;
-    /* Fundo branco para aspecto profissional */
     color: #0F1111;
-    /* Cor de texto padrão e-commerce */
-    display: grid;
-    /* Define as 3 colunas e permite que as linhas se ajustem */
-    grid-template-columns: 350px 1fr 300px;
     gap: 20px;
     padding: 20px;
-    max-width: 1300px;
-    margin: 0 auto;
+
+    margin: auto;
 }
 
 /* 2. COLUNA 1: CARROSSEL (IMAGENS) */
 .imagens {
-    grid-column: 1;
-    /* Mantém na primeira coluna */
-    justify-self: center;
-}
 
-.imagens {
+    float: left;
+    justify-self: center;
     position: relative;
     width: 300px;
     height: 400px;
     display: flex;
     align-items: center;
+    margin: 30px;
 }
 
 .imagens img {
     width: 100%;
     display: none;
     border-radius: 4px;
-    object-fit: contain;
+
 }
 
 .imagens img.ativo {
@@ -47,55 +33,39 @@ body {
 }
 
 
-.prev {
+#prev {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: -10px;
+    left: -20px;
 
 }
 
-.next {
+#next {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: -10px;
+    right: -20px;
 
 }
 
-.dots {
-    display: flex;
-    gap: 8px;
-   
-}
-
-.dot {
-    height: 12px;
-    width: 12px;
-    border: 1px solid #888;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.dot.ativo {
-    background-color: #e77600;
-    border-color: #e77600;
-}
-
-/* 3. COLUNA 2: INFORMAÇÕES DO LIVRO */
+/* 3. INFORMAÇÕES DO LIVRO */
 .info-principal {
-    grid-column: 2;
-    padding: 0 20px;
-    
+    display: block;
+
+    text-align: center;
+
+
 }
 
 .info-principal h1 {
     font-size: 24px;
     margin-bottom: 5px;
+    justify-content: center;
 }
 
 #JK {
@@ -108,21 +78,26 @@ body {
 .info-principal h3 {
     margin: 20px 0 10px 0;
     border-top: 1px solid #eee;
-    padding-top: 15px;
+    padding-top: 10px;
+    font-size: 14px
 }
 
-.info-principal p {
+#sinopse {
+    font-size: 14px;
+    color: #555;
     line-height: 1.5;
-    
+
+
+
 }
 
-/* 4. COLUNA 3: CAIXA DE COMPRA (ASIDE) */
+/* 4. CAIXA DE COMPRA (ASIDE) */
 aside {
-    grid-column: 3;
-    border: 1px solid #D5D9D9;
+    float: right;
+    border: 1px solid #f7f7f7;
     border-radius: 8px;
     padding: 20px;
-    height: fit-content;
+    margin: 30px;
 }
 
 .opcao {
@@ -202,34 +177,36 @@ select {
 
 .lista {
     background: #edeff0;
-    border-color: #D5D9D9;
-    border-radius: 4px;
+    border-color: #fdfdfd;
+    border-radius: 1px;
     margin-top: 10px;
 }
 
 /* 5. PARTE INFERIOR: DETALHES E TABELA */
 .detalhes-produto {
-    grid-column: 1 / -1;
-    /* Ocupa as 3 colunas (largura total) */
-    margin-top: 40px;
-    border-top: 1px solid #eee;
+
+    border-top: 1px solid #d8d6d6;
     padding-top: 20px;
+    margin: 30px;
+    
 }
 
 .tabela {
-    width: 100%;
-    max-width: 600px;
+
     border-collapse: collapse;
     margin-top: 20px;
 }
 
 .tabela td {
     padding: 10px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #bbb4b4;
+    text-align: center;
+    background-color: #dcdcdc;
+    font-size: 14px;
 }
 
 .tabela td:first-child {
-    background-color: #f3f3f3;
+    background-color: #edecec;
     font-weight: bold;
     width: 30%;
 }

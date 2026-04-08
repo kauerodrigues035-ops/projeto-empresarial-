@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Labirinto literário</title>
     <link rel="icon" href="icone livro.jpg">
-    <link rel="stylesheet" href="estilolivro.css">
+    <link rel="stylesheet" href="livro.css">
 
 </head>
 
@@ -19,18 +19,13 @@
         <img src="imagens/perfil.jpg" class="ativo">
         <img src="imagens/WhatsApp Image 2026-03-25 at 12.14.21.jpeg">
 
-        <button class="prev">‹</button>
-        <button class="next">›</button>
+        <button id="prev">‹</button>
+        <button id="next">›</button>
 
     </div>
 
 
-    <div class="dots">
-
-        <span class="dot ativo"></span>
-        <span class="dot"></span>
-
-    </div>
+    
 
 
     </div>
@@ -44,7 +39,7 @@
 
         <h3>Sobre o livro</h3>
 
-        <p>Harry Potter é um garoto cujos pais, feiticeiros, foram assassinados por um poderosíssimo bruxo quando ele
+        <p id="sinopse">Harry Potter é um garoto cujos pais, feiticeiros, foram assassinados por um poderosíssimo bruxo quando ele
             ainda era um bebê. Ele foi levado, então, para a casa dos tios que nada tinham a ver com o sobrenatural.
             Pelo contrário. Até os 10 anos, Harry foi uma espécie de gata borralheira: maltratado pelos tios, herdava
             roupas velhas do primo gorducho, tinha óculos remendados e era tratado como um estorvo. No dia de seu
@@ -251,12 +246,12 @@
             dots[i].classList.add("ativo");
         }
 
-        document.querySelector(".next").onclick = () => {
+        document.querySelector("#next").onclick = () => {
             index = (index + 1) % imagens.length;
             mostrarSlide(index);
         };
 
-        document.querySelector(".prev").onclick = () => {
+        document.querySelector("#prev").onclick = () => {
             index = (index - 1 + imagens.length) % imagens.length;
             mostrarSlide(index);
         }
