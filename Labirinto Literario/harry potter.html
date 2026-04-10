@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carrossel {
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .imagens img {
+            width: 100%;
+            display: none;
+            width: 250px;
+        }
+
+        .imagens img.ativo {
+            display: block;
+        }
+
+        .carrossel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #00000080;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            background: gray;
+            display: inline-block;
+            border-radius: 50%;
+            margin: 5px;
+        }
+
+        .dot.ativo {
+            background: black;
+        }
+
+        .opcao input {
+            display: none;
+        }
+
+        .box {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .opcao input:checked+.box {
+            border-color: #007185;
+
+            box-shadow: 0 0 0 2px #00718533;
+        }
+
+        .box:hover {
+            border-color: #007185;
+        }
+
+        opcoes {
+            display: flex;
+            gap: 10px;
+
+        }
+
+        .opcao {
+            flex: 1;
+
+        }
+
+        #JK {
+            color: #007185
+        }
+
+        #estoque {
+            color: rgb(72, 204, 83);
+        }
+
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .carrinho {
+            background-color: #FFD814;
+            width: 200px;
+            height: 50px;
+        }
+
+
+        .comprar {
+            background-color: #FFA41C;
+            width: 200px;
+            height: 50px;
+        }
+
+        .lista {
+            background-color: #95a82a;
+            width: 200px;
+            height: 50px;
+        }
+
+        .btn:hover {
+            filter: brightness(0.95);
+        }
+
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .tabela td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .tabela tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .tabela td:first-child {
+            width: 40%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p id="JK"> J.K Rowling</p>
+    <p>Harry Potter e a pedra filosofal</p>
+    <p>5,0 ★★★★★ (42)</p>
+    <div class="carrossel">
+        <button class="prev">‹</button>
+
+        <div class="imagens">
+            <img src="hp.frente.jpg" class="ativo">
+            <img src="hp.verso.jpg">
+        </div>
+
+        <button class="next">›</button>
+    </div>
+
+    <div class="dots">
+        <span class="dot ativo"></span>
+        <span class="dot"></span>
+    </div>
+
+    <label class="opcao">
+        <input type="radio" name="tipo" value="52.40" checked>
+        <div class="box">
+            <strong>Capa dura</strong>
+            <p>R$52,40</p>
+        </div>
+    </label>
+    <label class="opcao">
+        <input type="radio" name="tipo" value="45.80" checked>
+        <div class="box">
+            <strong>Capa comum </strong>
+            <p>R$45,80</p>
+        </div>
+    </label>
+    <label class="opcao">
+        <input type="radio" name="tipo" value="19.90" checked>
+        <div class="box">
+            <strong>E-book</strong>
+            <p>R$19,90</p>
+        </div>
+    </label>
+    <label class="opcao">
+        <input type="radio" name="tipo" value="39.20" checked>
+        <div class="box">
+            <strong>versão de bolso</strong>
+            <p>R$39,20</p>
+        </div>
+    </label>
+    <p id="estoque">Em estoque</p>
+    <p>Entrega Grátis: de 15 a 30 dias uteis</p>
+
+    <label>Quantidade:</label>
+
+    <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <br>
+    <br>
+    <br>
+    <div class="botoes">
+        <button class="btn carrinho">Adicionar ao carrinho</button>
+        <button class="btn comprar">Comprar agora</button>
+        <button class="btn lista">Adicionar a Lista</button>
+    </div>
+    <h2>Recursos e detalhes</h2>
+
+    <p>
+        <strong>ATENÇÃO, ANO CORRETO DO EXEMPLAR: 2012.</strong> Livro novo!
+        Depois de férias aborrecidas na casa dos tios trouxas, está na hora de Harry Potter voltar a estudar.
+        Coisas acontecem, no entanto, para dificultar seu retorno à Escola de Magia e Bruxaria de Hogwarts...
+    </p>
+    <h2>Especificações do produto</h2>
+
+    <table class="tabela">
+        <tr>
+            <td><strong>Editora</strong></td>
+            <td>Rocco</td>
+        </tr>
+        <tr>
+            <td><strong>Data da publicação</strong></td>
+            <td>15 agosto 2000</td>
+        </tr>
+        <tr>
+            <td><strong>Edição</strong></td>
+            <td>1ª</td>
+        </tr>
+        <tr>
+            <td><strong>Idioma</strong></td>
+            <td>Português</td>
+        </tr>
+        <tr>
+            <td><strong>Número de páginas</strong></td>
+            <td>288 páginas</td>
+        </tr>
+        <tr>
+            <td><strong>ISBN-10</strong></td>
+            <td>853251166X</td>
+        </tr>
+        <tr>
+            <td><strong>ISBN-13</strong></td>
+            <td>978-8532511669</td>
+        </tr>
+        <tr>
+            <td><strong>Peso do produto</strong></td>
+            <td>360 g</td>
+        </tr>
+        <tr>
+            <td><strong>Idade de leitura</strong></td>
+            <td>12 anos e acima</td>
+        </tr>
+        <tr>
+            <td><strong>Dimensões</strong></td>
+            <td>21 x 14 x 1.4 cm</td>
+        </tr>
+    </table>
+    <script>
+        let index = 0;
+        const imagens = document.querySelectorAll(".imagens img");
+        const dots = document.querySelectorAll(".dot");
+
+        function mostrarSlide(i) {
+            imagens.forEach(img => img.classList.remove("ativo"));
+            dots.forEach(dot => dot.classList.remove("ativo"));
+
+            imagens[i].classList.add("ativo");
+            dots[i].classList.add("ativo");
+        }
+
+        document.querySelector(".next").onclick = () => {
+            index = (index + 1) % imagens.length;
+            mostrarSlide(index);
+        };
+
+        document.querySelector(".prev").onclick = () => {
+            index = (index - 1 + imagens.length) % imagens.length;
+            mostrarSlide(index);
+        }
+
+
+    </script>
+</body>
+
+</html>

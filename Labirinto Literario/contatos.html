@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco </title>
+    <link rel="icon" href="imagens/img_icone.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #8ec1df, #50bfff);
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+
+
+        hr {
+            margin: 20px auto;
+            width: 60%;
+        }
+
+        /* IMAGEM */
+        .img_falecomigo {
+            display: block;
+            margin: 20px auto;
+            border-radius: 15px;
+            width: 200px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* CONTAINER */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* CARD */
+        fieldset {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            border: none;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background: #50bfff;
+            color: white;
+        }
+
+        /* INPUTS */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border: 2px solid #0984e3;
+            background-color: #fff;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        #contador {
+            font-size: 12px;
+            color: #555;
+        }
+
+        /* BOTÃO */
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 12px;
+            border: none;
+            background: #000;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0984e3;
+        }
+
+        /* REDES */
+        .redes a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .redes a:hover {
+            color: #e50914;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 600px) {
+            nav {
+                font-size: 14px;
+            }
+        }
+      img:hover, fieldset:hover, legend:hover, footer:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+    </style>
+</head>
+
+<body>
+
+    <h1>Fale Conosco </h1>
+
+    <h2>Menu</h2>
+   
+    <hr>
+
+    <img src="imagens/img_fale_comigo.jpg" alt="Fale comigo" class="img_falecomigo">
+
+    <div class="container">
+
+        <!-- FORM -->
+        <form action="agradecimento.html">
+            <fieldset>
+                <legend>Contato</legend>
+
+                <label>Nome</label>
+                <input type="text" name="nome" placeholder="Digite seu nome" required>
+
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Digite seu email" required>
+
+                <label>Comentário</label>
+                <textarea maxlength="300" id="comentario" rows="5" placeholder="Digite sua mensagem..." required></textarea>
+
+                <p id="contador">0 / 300</p>
+
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+
+        <!-- REDES -->
+        <fieldset class="redes">
+            <legend>Minhas Redes</legend>
+
+            <p>📸 Instagram:
+                <a href="https://www.instagram.com/_miguelsobral_" target="_blank">
+                    @_miguelsobral_
+                </a>
+            </p>
+
+            <p>💻 GitHub:
+                <a href="https://github.com/MiguelSobral20" target="_blank">
+                    MiguelSobral20
+                </a>
+            </p>
+
+            <p>✉️ Email:
+                <a href="mailto:miguelsobralm@gmail.com">
+                    miguelsobralm@gmail.com
+                </a>
+            </p>
+
+            <p>🔗 LinkedIn:
+                <a href="https://www.linkedin.com/in/miguel-sobral-1247012a8" target="_blank">
+                    Miguel Sobral
+                </a>
+            </p>
+
+        </fieldset>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Miguel Sobral</p>
+    </footer>
+
+    <!-- CONTADOR DE CARACTERES -->
+    <script>
+        const textarea = document.getElementById("comentario");
+        const contador = document.getElementById("contador");
+
+        textarea.addEventListener("input", () => {
+            contador.textContent = textarea.value.length + " / 300";
+        });
+    </script>
+
+</body>
+
+</html>
