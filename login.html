@@ -25,8 +25,10 @@
 <main class="container">
 
          <h1>Faça seu login</h1>
+         
+         <p id="mensagem-erro" style="color: #e74c3c; text-align: center; height: 20px; margin-bottom: 10px; font-weight: bold;"></p>
 
- <form action="index.html" method="post" autocomplete="off">
+ <form id="login" action="index.html" method="post" autocomplete="off">
 
     <div class="input-box">
 
@@ -73,6 +75,40 @@
          <p><small>Para descobrir mais sobre o nosso labirinto literário, visite nossa página sobre.<br><a href="sobre.html">Saiba mais</a></small></p>
 
 </footer>
+
+<script>
+    
+    const formulario = document.getElementById('login');
+    const campoErro = document.getElementById('mensagem-erro');
+
+    formulario.addEventListener('submit', function(evento) {
+        evento.preventDefault(); 
+
+        const emailDigitado = document.getElementById('email').value;
+        const senhaDigitada = document.getElementById('senha').value;
+
+        const emailCorreto = "labirinto@gmail.com";
+        const senhaCorreta = "teste1234";
+
+        if (emailDigitado === emailCorreto && senhaDigitada === senhaCorreta) {
+            
+            setTimeout(() => {
+                window.location.href = "index.html"; 
+            });
+            
+        } else {
+            
+            campoErro.style.color = "red";
+            
+            campoErro.textContent = "E-mail ou senha inválidos. Tente novamente.";
+            
+            // Um toque de mestre: limpar a senha para o usuário
+            document.getElementById('senha').value = "";
+            
+            document.getElementById('email').value = "";
+        }
+    });
+</script>
 
 </body>
 </html>
