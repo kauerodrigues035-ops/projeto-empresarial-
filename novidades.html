@@ -19,7 +19,7 @@
             font-family: Arial, Helvetica, sans-serif
         }
 
-    
+
         h3 {
             text-align: center;
             font-family: Arial, Helvetica, sans-serif
@@ -29,6 +29,7 @@
             text-align: center;
             font-family: Arial, Helvetica, sans-serif
         }
+
         hr {
             border: none;
             height: 1px;
@@ -42,16 +43,21 @@
             border-radius: 10px;
             border-color: black;
             background-color: antiquewhite;
-            
+            transition: 0.3s;
+            animation: flutuar 3s ease-in-out infinite;
+
         }
 
         p {
             text-align: center;
             font-family: 'Times New Roman', Times, serif;
             font-size: 18px;
+            
+             transition: 0.3s;
+            animation: flutuar 3s ease-in-out infinite; 
         }
 
-    
+
 
         .img_cs {
             border: 3px solid black;
@@ -59,23 +65,10 @@
             display: block;
             margin: auto;
             box-shadow: 0px 5px 15px rgba(0, 0, 0.3);
+            transition: 0.3s;
+            animation: flutuar 3s ease-in-out infinite;
         }
 
-        .img_html1 {
-            border: 3px solid black;
-            border-radius: 15px;
-            display: block;
-            margin: auto;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0.3);
-        }
-
-        .img_html2 {
-            border: 3px solid black;
-            border-radius: 15px;
-            display: block;
-            margin: auto;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0.3);
-        }
 
         .img_pf {
             border: 3px solid black;
@@ -83,6 +76,18 @@
             display: block;
             margin: auto;
             box-shadow: 0px 5px 15px rgba(0, 0, 0.3);
+            transition: 0.3s;
+            animation: flutuar 3s ease-in-out infinite;
+        }
+
+        .img_hbt {
+            border: 3px solid black;
+            border-radius: 15px;
+            display: block;
+            margin: auto;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0.3);
+            transition: 0.3s;
+            animation: flutuar 3s ease-in-out infinite;
         }
 
         .img_sda1 {
@@ -91,8 +96,19 @@
             display: block;
             margin: auto;
             box-shadow: 0px 5px 15px rgba(0, 0, 0.3);
+            transition: 0.3s;
+            animation: flutuar 3s ease-in-out infinite;
         }
 
+        .img_vct {
+            border: 3px solid black;
+            border-radius: 15px;
+            display: block;
+            margin: auto;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0.3);
+            transition: 0.3s;
+            animation: flutuar 3s ease-in-out infinite;
+        }
 
         legend {
             text-align: center;
@@ -101,14 +117,17 @@
             padding: 5px 10px;
             border: 2px solid #555;
             border-radius: 5px;
+            transition: 0.3s;
+            animation: flutuar 3s ease-in-out infinite;
         }
 
         footer {
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
-            color:antiquewhite;
-       
-          
+            color: antiquewhite;
+
+
+
         }
 
         #mod4 {
@@ -116,23 +135,48 @@
 
 
         }
+
         main {
             height: 20vh;
         }
-      img:hover, fieldset:hover, legend:hover, footer:hover, p:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-}
-#pp{
-           border: 2px solid antiquewhite;
-            border-radius: 10px;
-}
 
+        img:hover,
+        fieldset:hover,
+        legend:hover,
+        #pp:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            animation: none;
+
+        }
+
+        #pp {
+            border: 2px solid antiquewhite;
+            border-radius: 10px;
+            transition: 0.3s;
+            animation: flutuar 3s ease-in-out infinite;
+        }
+
+
+
+        @keyframes flutuar {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
     </style>
 </head>
 
 <body>
-   
+
 
 
     <fieldset>
@@ -153,7 +197,7 @@
             Agora, essa obra icônica está disponível em nosso site.
 
             Prepare-se para viver essa magia, afinal, algumas histórias nunca envelhecem.
-        <hr>
+            <hr>
 
         <h3>Harry Potter e a Camara Secreta </h3>
         <h5>Postagem do dia 8 de abril(Quarta-feira)</h5>
@@ -170,26 +214,59 @@
             universo mágico.
 
             Agora, essa história incrível já está disponível em nosso site.
-       
-        <hr>
-        <h3>O Senhor dos Aneis: A sociedade do Anel</h3>
+
+            <hr>
+        <h3> O Hobbit</h3>
         <h5>Postagem do dia 10 de abril(Sexta-feira)</h5>
-        <img src="imagens/img_sda1.jpeg" alt="Imagem de O Senhor dos Aneis: A sociedade do anel" width="300" class="img_sda1">
+        <img src="imagens/img_hbt.jpeg" alt="Imagem de O Hobbit" width="300" class="img_hbt">
 
-        <p id="pp" >
-         Nessa semana, iniciamos uma inesperada aventura com Bilbo bolseiro e a companhia de Thorin escudo de carvalho rumo a montanha solitária e a seus tesouros.
+        <p id="pp">
+            Nessa semana, iniciamos uma inesperada aventura com Bilbo bolseiro e a companhia de Thorin escudo de
+            carvalho rumo a montanha solitária e a seus tesouros.
 
-Bilbo e um simples Hobbit do condado, porém como você ira ver ele tem muito mais a mostrar,  ele mostrara sua coragem, astucia, lealdade , lutando contra trolls e orks e ate enfrentando seus amigos para defender o que acreditava.
+            Bilbo e um simples Hobbit do condado, porém como você ira ver ele tem muito mais a mostrar, ele mostrara sua
+            coragem, astucia, lealdade , lutando contra trolls e orks e ate enfrentando seus amigos para defender o que
+            acreditava.
 
-O Hobbit já disponível em nosso site.
+            O Hobbit já disponível em nosso site.
 
-Venha acompanhar Bilbo em sua jornada clicando  no link abaixo:
-     
+            Venha acompanhar Bilbo em sua jornada clicando no link abaixo:
+            <hr>
+        <h3> O Senhor dos Aneis: A sociedade do Anel </h3>
+        <h5> Postagem do dia 10 de abril(Sexta-feira)</h5>
+        <img src="imagens/img_sda1.jpeg" alt="Imagem de O Senhor dos Aneis: A sociedade do anel" width="300"
+            class="img_sda1">
+
+        <p id="pp"> Nesta semana, vamos acompanhar a jornada de Frodo que
+            como seu tio Bilbo esta
+            prestis a sair em uma jornada,
+            porém mais importante e por sua vez muito mais perigosa.
+
+            Frodo sobrinho de Bilbo, o mesmo Bilbo que ajudou a companhia de Thorin a retomar Erebor, mas agora movido
+            pelas historias de seu tio Frodo terá de enfrentar orks, aranhas, nazguls e levar o um anel ate a montanha
+            da perdição na terra sombria de Mordor.
+
+            O senhor dos anéis disponível agora em nosso site.
+
+            Venha se juntar a Frodo em sua jornada clicando no link abaixo: </p>
+        <hr>
+        <h3> Viagem ao centro da terra</h3>
+        <h5> Postagem do dia 14 de abril (Terça-feira)</h5>
+        <img src="imagens/img_vct.jpeg" alt="Imagem de A viagem ao centro da terra" width="300" class="img_vct">
+        <p id="pp"> Nesta semana, A viajem ao centro da terra de Julio Verne ,um dos maiores clássicos de aventura de
+            todos os tempos o livro que consagrou Julio Verne como o pai do gênero de aventura.
+
+            Vamos acompanhar um jovem e seu tio excêntrico e seu fiel guia aos confins da terra , por entre tunes de
+            lava , oceanos perdidos e enfrentando perigos já extintos.
+
+            A viajem ao centro da terra já disponivel em em nosso site.
+
+            Faça parte de expedição clicando no link abaixo:</p>
     </fieldset>
-  
+
     <main></main>
     <footer>
-        <p>&copy; 2026 - Miguel Sobral. Todos os direitos reservados.</p>
+        <p>&copy; 2026 - Labirinto literário. Todos os direitos reservados.</p>
     </footer>
 </body>
 
