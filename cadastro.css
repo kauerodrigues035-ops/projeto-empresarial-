@@ -98,15 +98,15 @@ footer {
     text-align: center; /* Centraliza o texto do rodape */
     padding: 20px; /* Padding para dar espaço ao conteudo do rodape */
     font-size: 14px; /* Tamanho da fonte do rodape */
-    color: #3182df; /* Cor do texto do rodape */
+    color: #054fb9; /* Cor do texto do rodape */
     position: absolute; 
     bottom: 0; 
-    
+    text-shadow: 2px 2px 2px #000000; /* Sombra para dar profundidade */
 }
 
 footer a {
     text-decoration: none; /* Remove sublinhado do link */
     cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
-    color: #3700ff; /* Cor do link */
+    color: #2eadd8; /* Cor do link */
     
 }
