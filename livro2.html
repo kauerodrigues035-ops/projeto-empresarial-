@@ -14,223 +14,67 @@
 <body>
 
 
-    <div class="imagens">
+    <main class="container">
+        <aside>
+            <div class="imagens">
+                <img src="harrypotter.jpg" class="ativo" alt="Capa do Livro">
+                <img src="icone livro.jpg" alt="Imagem secundária do livro">
 
-        <img src="imagens/perfil.jpg" class="ativo">
-        <img src="imagens/WhatsApp Image 2026-03-25 at 12.14.21.jpeg">
-
-        <button id="prev">‹</button>
-        <button id="next">›</button>
-
-    </div>
-
-
-    
-
-
-    </div>
-    <section class="info-principal">
-
-        <h1>Harry Potter e a pedra filosofal</h1>
-
-        <p id="JK">Por <small><em>J.K. Rowling</em></small> (Autor)</p>
-
-        <p>5,0 <span style="color: #FFD700;">★★★★★</span> (42)</p>
-
-        <h3>Sobre o livro</h3>
-
-        <p id="sinopse">Harry Potter é um garoto cujos pais, feiticeiros, foram assassinados por um poderosíssimo bruxo quando ele
-            ainda era um bebê. Ele foi levado, então, para a casa dos tios que nada tinham a ver com o sobrenatural.
-            Pelo contrário. Até os 10 anos, Harry foi uma espécie de gata borralheira: maltratado pelos tios, herdava
-            roupas velhas do primo gorducho, tinha óculos remendados e era tratado como um estorvo. No dia de seu
-            aniversário de 11 anos, entretanto, ele parece deslizar por um buraco sem fundo, como o de Alice no país das
-            maravilhas, que o conduz a um mundo mágico. Descobre sua verdadeira história e seu destino: ser um aprendiz
-            de feiticeiro até o dia em que terá que enfrentar a pior força do mal, o homem que assassinou seus pais. O
-            menino de olhos verde, magricela e desengonçado, tão habituado à rejeição, descobre, também, que é um herói
-            no universo dos magos. Potter fica sabendo que é a única pessoa a ter sobrevivido a um ataque do tal bruxo
-            do mal e essa é a causa da marca em forma de raio que ele carrega na testa. Ele não é um garoto qualquer,
-            ele sequer é um feiticeiro qualquer ele é Harry Potter, símbolo de poder, resistência e um líder natural
-            entre os sobrenaturais. A fábula, recheada de fantasmas, paredes que falam, caldeirões, sapos, unicórnios,
-            dragões e gigantes, não é, entretanto, apenas um passatempo.</p>
-
-    </section>
-
-
-
-    <aside>
-
-        <label class="opcao">
-
-            <input type="radio" name="tipo" value="52.40" checked>
-
-            <div class="box">
-
-                <strong>Capa dura</strong>
-                <p>R$52,40</p>
+                <button id="prev" aria-label="Anterior" style="color: white;">‹</button>
+                <button id="next" aria-label="Próximo" style="color: white;">›</button>
             </div>
+        </aside>
 
-        </label>
+        <section class="info-principal">
 
-        <label class="opcao">
+            <h1>Harry Potter e a pedra filosofal</h1>
 
-            <input type="radio" name="tipo" value="45.80" checked>
+            <p id="JK">Por <small><em>J.K. Rowling</em></small> (Autor)</p>
 
-            <div class="box">
+            <p>5,0 <span style="color: #FFD700;">★★★★★</span> (42)</p>
 
-                <strong>Capa comum </strong>
-                <p>R$45,80</p>
-            </div>
+            <h3>Sobre o livro</h3>
 
-        </label>
+            <p id="sinopse">Harry Potter é um garoto cujos pais, feiticeiros, foram assassinados por um poderosíssimo
+                bruxo
+                quando ele
+                ainda era um bebê. Ele foi levado, então, para a casa dos tios que nada tinham a ver com o sobrenatural.
+                Pelo contrário. Até os 10 anos, Harry foi uma espécie de gata borralheira: maltratado pelos tios,
+                herdava
+                roupas velhas do primo gorducho, tinha óculos remendados e era tratado como um estorvo. No dia de seu
+                aniversário de 11 anos, entretanto, ele parece deslizar por um buraco sem fundo, como o de Alice no país
+                das
+                maravilhas, que o conduz a um mundo mágico. Descobre sua verdadeira história e seu destino: ser um
+                aprendiz
+                de feiticeiro até o dia em que terá que enfrentar a pior força do mal, o homem que assassinou seus pais.
+                O
+                menino de olhos verde, magricela e desengonçado, tão habituado à rejeição, descobre, também, que é um
+                herói
+                no universo dos magos. Potter fica sabendo que é a única pessoa a ter sobrevivido a um ataque do tal
+                bruxo
+                do mal e essa é a causa da marca em forma de raio que ele carrega na testa. Ele não é um garoto
+                qualquer,
+                ele sequer é um feiticeiro qualquer ele é Harry Potter, símbolo de poder, resistência e um líder natural
+                entre os sobrenaturais. A fábula, recheada de fantasmas, paredes que falam, caldeirões, sapos,
+                unicórnios,
+                dragões e gigantes, não é, entretanto, apenas um passatempo.</p>
 
-        <label class="opcao">
-
-            <input type="radio" name="tipo" value="19.90" checked>
-
-            <div class="box">
-
-                <strong>E-book</strong>
-                <p>R$19,90</p>
-            </div>
-
-        </label>
-
-        <label class="opcao">
-
-            <input type="radio" name="tipo" value="39.20" checked>
-
-            <div class="box">
-
-                <strong>versão de bolso</strong>
-                <p>R$39,20</p>
-
-            </div>
-
-        </label>
-
-        <p id="estoque">Em estoque</p>
-        <p>Entrega Grátis: de 15 a 30 dias uteis</p>
-
-        <label>Quantidade:</label>
-
-        <select>
-
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-
-        </select>
-
-        <br>
-        <br>
-        <br>
+        </section>
 
         <div class="botoes">
-
-            <button class="btn carrinho">Adicionar ao carrinho</button>
-            <button class="btn comprar">Comprar agora</button>
-            <button class="btn lista">Adicionar a Lista</button>
-
+            <button class="btn-baixar">Baixar PDF</button>
+            <button class="btn-abrir">Abrir PDF</button>
         </div>
 
-    </aside>
+    </main>
 
-    <section class="detalhes-produto">
+    <footer>
 
-        <h2>Recursos e detalhes</h2>
+        <p><small>&copy; 2026 Labirinto literário. Todos os direitos reservados.</small></p>
+        <p><small>Para descobrir mais sobre o nosso labirinto literário, visite nossa página sobre.<br><a
+                    href="sobre.html">Saiba mais</a></small></p>
 
-        <p>
-
-            <strong>ATENÇÃO, ANO CORRETO DO EXEMPLAR: 2012.</strong> Livro novo!
-            Depois de férias aborrecidas na casa dos tios trouxas, está na hora de Harry Potter voltar a estudar.
-            Coisas acontecem, no entanto, para dificultar seu retorno à Escola de Magia e Bruxaria de Hogwarts...
-
-        </p>
-
-        <h2>Especificações do produto</h2>
-
-        <table class="tabela">
-
-            <tr>
-
-                <td><strong>Editora</strong></td>
-                <td>Rocco</td>
-
-            </tr>
-
-            <tr>
-
-                <td><strong>Data da publicação</strong></td>
-                <td>15 agosto 2000</td>
-
-            </tr>
-
-            <tr>
-
-                <td><strong>Edição</strong></td>
-                <td>1ª</td>
-
-            </tr>
-
-            <tr>
-
-                <td><strong>Idioma</strong></td>
-                <td>Português</td>
-
-            </tr>
-
-            <tr>
-
-                <td><strong>Número de páginas</strong></td>
-                <td>288 páginas</td>
-
-            </tr>
-
-            <tr>
-
-                <td><strong>ISBN-10</strong></td>
-                <td>853251166X</td>
-
-            </tr>
-
-            <tr>
-
-                <td><strong>ISBN-13</strong></td>
-                <td>978-8532511669</td>
-
-            </tr>
-
-            <tr>
-
-                <td><strong>Peso do produto</strong></td>
-                <td>360 g</td>
-
-            </tr>
-
-            <tr>
-
-                <td><strong>Idade de leitura</strong></td>
-                <td>12 anos e acima</td>
-
-            </tr>
-
-            <tr>
-
-                <td><strong>Dimensões</strong></td>
-                <td>21 x 14 x 1.4 cm</td>
-
-            </tr>
-
-        </table>
-
-    </section>
+    </footer>
 
     <script>
 
