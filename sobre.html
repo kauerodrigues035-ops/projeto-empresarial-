@@ -17,7 +17,7 @@
       background: linear-gradient(135deg, #0f172a, #0d0d0d);
       color: #f1f5f9;
       line-height: 1.6;
-      background-image: url("fundo.jpg");
+      background-image: url("imagens/fundo.jpg");
       
     }
 
@@ -100,10 +100,157 @@
             margin: auto;
             box-shadow: 0px 5px 15px rgb(8, 8, 8);
     }
-  </style>
+    
+
+.container {
+    text-align: center;
+    border: 5px solid rgb(213, 213, 213);
+    color: #edc54d;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+    text-shadow: 1px 10px 0px #000000;
+    background-image: url(imagens/banner\ \(3\).png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: clamp(150px, 25vw, 250px);
+    object-fit: cover;
+    /* A imagem corta as laterais mas mantém a proporção */
+    object-position: center;
+    /* Mantém o centro da imagem sempre visível */
+    display: block;
+}
+
+#ft-perfil {
+    border-radius: 80%;
+margin: 10px;
+    width: 30%;
+border: 2px solid gold;
+box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.lateral {
+    background-color:#1A1A1A;
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    left: -274px;
+    z-index: 1000;
+    transition: 0.5s;
+    border-radius: 3px;
+    text-align: center;
+    color: rgb(104, 51, 165);
+    border: solid, 1px gold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    padding-top: 60px;
+}
+
+.lateral p  {
+    font-size: x-small;
+    margin: 10px;
+   
+}
+
+.lateral h3{
+    color: gold;
+    text-shadow: none;
+}
+.lateral ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.lateral a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #BFBFBF;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+    transition: 0.3s;
+}
+
+.lateral a:hover {
+    color: gold;
+  background-color: rgb(255, 255, 255,0.05);
+    transition: all, 0.5s;
+    padding: 15px;
+}
+
+.lateral.active {
+    left: 0%;
+    
+}
+
+.menu-butao {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.3s;
+}
+
+        
+    </style>
 </head>
 
 <body>
+ <div class="overlay" id="overlay"></div>
+
+    <nav class="lateral" id="lateral">
+        <img id="ft-perfil" src="imagens/perfil.jpg" alt="perfil">
+        <p><a href="">login</a></p>
+        <hr>
+        <h3>menu lateral:</h3>
+        <hr>
+        <ul>
+            <br>
+              <li><a href="index.html">Inicio</a></li><br>
+
+            <li><a href="#">Produtos</a></li><br>
+
+            <li><a href="contatos.html">Contatos</a></li><br>
+
+            <li><a href="sobre.html">Sobre</a></li><br>
+
+              <li><a href="novidades.html">Novidades</a></li><br>
+        </ul>
+
+        </div>
+
+    </nav>
+
+    <nav class="container">
+        <button id="menu-butao" class="menu-butao">☰</button>
+        
+    </nav>
 
   <header>
     <h1>Sobre o labirinto literario</h1>
@@ -133,25 +280,25 @@
         <div class="member">
           <h3>Miguel</h3>
           <p>Desenvolvedor e idealizador.</p>
-          <img src="fotodomiguel.jpeg" alt="imagem do miguel" width="100" height="100" class="imagem">
+          <img src="imagens/fotodomiguel.jpeg" alt="imagem do miguel" width="100" height="100" class="imagem">
         </div>
 
         <div class="member">
           <h3>Breno</h3>
           <p>Desenvolvedor.</p>
-          <img src="fotodobreno.jpeg" alt="imagem do breno" width="120" height="100" class="imagem">
+          <img src="imagens/fotodobreno.jpeg" alt="imagem do breno" width="120" height="100" class="imagem">
         </div>
 
         <div class="member">
           <h3>Kaue</h3>
           <p>Designer, Desenvolvedor.</p>
-          <img src="fotodokaue.jpeg" alt="imagem do kaue" width="100" class="imagem">
+          <img src="imagens/fotodokaue.jpeg" alt="imagem do kaue" width="100" class="imagem">
         </div>
 
         <div class="member">
           <h3>João</h3>
           <p>Suporte e conteúdo.</p>
-          <img src="fotodeperfil.jpg" alt="imagem do joão" width="100" class="imagem">
+          <img src="imagens/fotodeperfil.jpg" alt="imagem do joão" width="100" class="imagem">
         </div>
       </div>
     </div>
@@ -170,6 +317,31 @@
     &copy; 2026 - Labirinto literario. Todos os direitos reservados.
     </p>
   </footer>
+<script>
+    document.getElementById('menu-butao').addEventListener('click', function () {
+    const lateral = document.getElementById('lateral');
+    const overlay = document.getElementById('overlay'); 
 
+    lateral.classList.toggle('active');
+    overlay.classList.toggle('active'); // Ativa/desativa o blur junto com a barra
+
+   
+    if (lateral.classList.contains('active')) {
+        this.textContent = '☰';
+    } else {                          //ABRE E FECHA O MENU
+        this.textContent = '☰';
+    }
+});
+
+//  Fecha o menu se clicar no desfoque (fora da barra)
+document.getElementById('overlay').addEventListener('click', function () {
+    const lateral = document.getElementById('lateral');
+    const btn = document.getElementById('menu-butao');
+    
+    lateral.classList.remove('active');
+    this.classList.remove('active');
+    btn.textContent = '☰';
+});
+</script>
 </body>
 </html>

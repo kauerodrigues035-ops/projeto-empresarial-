@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notícias e Novidades</title>
-    <link rel="icon" href="imagens/img_icone.png">
+    <link rel="icon" href="imagens/img_icone.jpeg">
     <style>
         body {
             background-image: url('imagens/img_novidade.jpeg');
@@ -52,8 +52,6 @@
             text-align: center;
             font-family: 'Times New Roman', Times, serif;
             font-size: 18px;
-            
-             
         }
 
 
@@ -171,11 +169,133 @@
                 transform: translateY(0px);
             }
         }
+      
+        .container {
+    text-align: center;
+    color: rgb(254, 254, 254);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    background-image: url(imagens/banner.png);
+    background-size: 100% 100%;
+height: 220px;
+}
+
+
+.lateral {
+    background-color: rgb(42, 37, 37);
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    left: -260px;
+    z-index: 1000;
+    transition: 0.5s;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 125px;
+    color: gold;
+    border: solid, 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lateral p {
+    font-size: x-small;
+    display: grid;
+}
+
+.lateral ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.lateral a {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: solid 3px gold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.lateral a:hover {
+    color: gold;
+    background-color: black;
+    transition: all, 0.5s;
+}
+
+.lateral.active {
+    left: 0%;
+}
+
+.menu-butao {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: antiquewhite;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.3s;
+}
+
+        
     </style>
 </head>
 
 <body>
+ <div class="overlay" id="overlay"></div>
 
+    <nav class="lateral" id="lateral">
+        <img id="ft-perfil" src="imagens/perfil.jpg" alt="perfil">
+        <p><a href="">login</a></p>
+        <hr>
+        <h3>menu lateral:</h3>
+        <hr>
+        <ul>
+            
+              <li><a href="index.html">Inicio</a></li><br>
+
+            <li><a href="#">Produtos</a></li><br>
+
+            <li><a href="contatos.html">Contatos</a></li><br>
+
+            <li><a href="sobre.html">Sobre</a></li><br>
+
+              <li><a href="novidades.html">Novidades</a></li><br>
+        </ul>
+
+        </div>
+
+    </nav>
+
+    <nav class="container">
+        <h1> LABIRINTO LITERARIO </h1>
+        <button id="menu-butao" class="menu-butao">☰</button>
+        
+    </nav>
 
 
     <fieldset>
@@ -195,7 +315,7 @@
 
             Agora, essa obra icônica está disponível em nosso site.
 
-            Prepare-se para viver essa magia, afinal, algumas histórias nunca envelhecem.
+            Prepare-se para viver essa magia, afinal, algumas histórias nunca envelhecem.</p>
             <hr>
 
         <h3>Harry Potter e a Camara Secreta </h3>
@@ -212,7 +332,7 @@
             Com mistérios, segredos inesperados e uma reviravolta marcante, essa nova aventura aprofunda ainda mais o
             universo mágico.
 
-            Agora, essa história incrível já está disponível em nosso site.
+            Agora, essa história incrível já está disponível em nosso site.</p>
 
             <hr>
         <h3> O Hobbit</h3>
@@ -227,8 +347,7 @@
             coragem, astucia, lealdade , lutando contra trolls e orks e ate enfrentando seus amigos para defender o que
             acreditava.
 
-            O Hobbit já disponível em nosso site.
-
+            O Hobbit já disponível em nosso site.</p>
             
             <hr>
         <h3> O Senhor dos Aneis: A sociedade do Anel </h3>
@@ -245,9 +364,7 @@
             pelas historias de seu tio Frodo terá de enfrentar orks, aranhas, nazguls e levar o um anel ate a montanha
             da perdição na terra sombria de Mordor.
 
-            O senhor dos anéis disponível agora em nosso site.
-
-            </p>
+            O senhor dos anéis disponível agora em nosso site.</p>
         <hr>
         <h3> Viagem ao centro da terra</h3>
         <h5> Postagem do dia 14 de abril (Terça-feira)</h5>
@@ -258,15 +375,40 @@
             Vamos acompanhar um jovem e seu tio excêntrico e seu fiel guia aos confins da terra , por entre tunes de
             lava , oceanos perdidos e enfrentando perigos já extintos.
 
-            A viajem ao centro da terra já disponivel em em nosso site.
-
-          </p>
+            A viajem ao centro da terra já disponivel em em nosso site.</p>
     </fieldset>
 
     <main></main>
     <footer>
         <p>&copy; 2026 - Labirinto literário. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        document.getElementById('menu-butao').addEventListener('click', function () {
+    const lateral = document.getElementById('lateral');
+    const overlay = document.getElementById('overlay'); 
+
+    lateral.classList.toggle('active');
+    overlay.classList.toggle('active'); // Ativa/desativa o blur junto com a barra
+
+   
+    if (lateral.classList.contains('active')) {
+        this.textContent = '☰';
+    } else {                          //ABRE E FECHA O MENU
+        this.textContent = '☰';
+    }
+});
+
+//  Fecha o menu se clicar no desfoque (fora da barra)
+document.getElementById('overlay').addEventListener('click', function () {
+    const lateral = document.getElementById('lateral');
+    const btn = document.getElementById('menu-butao');
+    
+    lateral.classList.remove('active');
+    this.classList.remove('active');
+    btn.textContent = '☰';
+});
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de mensagem </title>
+    <link rel="icon" href="imagens/img_icone.png">
+    <style>
+        body {
+            padding: 20px;
+            background-image: url('imagens/fundoagracimento.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h2 {
+            text-align: center;
+            padding-inline-start: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            color:  rgb(20, 155, 155);
+
+        }
+
+        h3 {
+            text-align: center;
+            padding-inline-start: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(20, 155, 155);
+
+        }
+
+        .img_agradecimento {
+            border: 3px solid black;
+            border-radius: 15px;
+            display: block;
+            margin: auto;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0.3);
+
+        }
+
+        nav {
+            text-align: center;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav a {
+
+            padding: 10px 20px;
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+
+        }
+
+        nav a:hover {
+            color: cadetblue;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+                color: antiquewhite;
+        }
+
+        main {
+            height: 20vh;
+        }
+         .container2 {
+    text-align: center;
+    color: rgb(254, 254, 254);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    background-image: url(imagens/banner.png);
+    background-size: 100% 100%;
+}
+
+
+.lateral {
+    background-color: rgb(42, 37, 37);
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    left: -260px;
+    z-index: 1000;
+    transition: 0.5s;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 125px;
+    color: gold;
+    border: solid, 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lateral p {
+    font-size: x-small;
+    display: grid;
+}
+
+.lateral ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.lateral a {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: solid 3px gold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.lateral a:hover {
+    color: gold;
+    background-color: black;
+    transition: all, 0.5s;
+}
+
+.lateral.active {
+    left: 0%;
+}
+
+.menu-butao {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer; 
+    color:antiquewhite;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.3s;
+}
+#h3_2{
+ color: gold;
+}
+
+    </style>
+</head>
+
+<body>
+  <div class="overlay" id="overlay"></div>
+
+    <nav class="lateral" id="lateral">
+        <img id="ft-perfil" src="imagens/perfil.jpg" alt="perfil">
+        <p><a href="">login</a></p>
+        <hr>
+        <h3 id="h3_2">menu lateral:</h3>
+        <hr>
+        <ul>
+            
+              <li><a href="index.html">Inicio</a></li><br>
+
+            <li><a href="#">Produtos</a></li><br>
+
+            <li><a href="contatos.html">Contatos</a></li><br>
+
+            <li><a href="sobre.html">Sobre</a></li><br>
+
+              <li><a href="novidades.html">Novidades</a></li><br>
+        </ul>
+
+        </div>
+
+    </nav>
+
+    <nav class="container">
+        <h1> LABIRINTO LITERARIO </h1>
+        <button id="menu-butao" class="menu-butao">☰</button>
+        
+    </nav>
+    <img src="imagens/img_agradecimento.jpg" alt="Foto de img_agradecimento " width="250" height="250"
+        class="img_agradecimento">
+    <h2> Seus dados foram enviados corretamente</h2>
+    <h3>Agradeço pelo feedback</h3>
+    <nav>
+        <a href="contatos.html" title="clique aqui!">Voltar</a>
+    </nav>
+    <main></main>
+    <footer>
+        <p>&copy; 2026 - Labirinto literário. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.getElementById('menu-butao').addEventListener('click', function () {
+    const lateral = document.getElementById('lateral');
+    const overlay = document.getElementById('overlay'); 
+
+    lateral.classList.toggle('active');
+    overlay.classList.toggle('active'); // Ativa/desativa o blur junto com a barra
+
+   
+    if (lateral.classList.contains('active')) {
+        this.textContent = '☰';
+    } else {                          //ABRE E FECHA O MENU
+        this.textContent = '☰';
+    }
+});
+
+//  Fecha o menu se clicar no desfoque (fora da barra)
+document.getElementById('overlay').addEventListener('click', function () {
+    const lateral = document.getElementById('lateral');
+    const btn = document.getElementById('menu-butao');
+    
+    lateral.classList.remove('active');
+    this.classList.remove('active');
+    btn.textContent = '☰';
+});
+    </script>
+</body>
+
+</html>
