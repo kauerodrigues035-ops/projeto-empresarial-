@@ -42,16 +42,7 @@
          <input type="password" id="senha" required placeholder="Insira sua senha" minlength="8" maxlength="12" size="12"> 
          <i class="bx bx-lock"></i>  <br><br>
 
-    </div>       
-
-    <div class="lembrar-senha">    
-
-         <label>
-         <input type="checkbox" id="salvar-senha">
-         Lembrar senha
-         </label><br><br>
-
-    </div>         
+    </div>             
 
     <div>
 
@@ -62,6 +53,7 @@
     <div class="cadastro">
 
          <p>Não tem uma conta?<a href="cadastro.html"> Cadastre-se</a></p>
+         <p><a href="index.html">Voltar</a>para a página inicial</p>
 
     </div>
 
@@ -71,41 +63,40 @@
 
 <footer>
 
-         <p> <small>&copy; 2026 Labirinto literário. Todos os direitos reservados.</small></p>
+         <p><small>&copy; 2026 Labirinto literário. Todos os direitos reservados.</small></p>
          <p><small>Para descobrir mais sobre o nosso labirinto literário, visite nossa página sobre.<br><a href="sobre.html">Saiba mais</a></small></p>
 
 </footer>
 
 <script>
     
-    const formulario = document.getElementById('login');
-    const campoErro = document.getElementById('mensagem-erro');
+    const formulario = document.getElementById('login'); /* Pega o formulario */
+    const campoErro = document.getElementById('mensagem-erro'); /* Pega o campo de erro */
 
-    formulario.addEventListener('submit', function(evento) {
-        evento.preventDefault(); 
+    formulario.addEventListener('submit', function(evento) { /* Adiciona um evento de submit ao formulario */
+        evento.preventDefault(); /* Impede que o formulario seja enviado */
 
-        const emailDigitado = document.getElementById('email').value;
-        const senhaDigitada = document.getElementById('senha').value;
+        const emailDigitado = document.getElementById('email').value; /* verifica o email digitado */
+        const senhaDigitada = document.getElementById('senha').value; /* verifica a senha digitada */
 
-        const emailCorreto = "labirinto@gmail.com";
-        const senhaCorreta = "teste1234";
+        const emailCorreto = "labirinto@gmail.com"; /* Email correto */
+        const senhaCorreta = "teste1234"; /* Senha correta */
 
-        if (emailDigitado === emailCorreto && senhaDigitada === senhaCorreta) {
+        if (emailDigitado === emailCorreto && senhaDigitada === senhaCorreta) { /* Verifica se o email e a senha estão corretos */
             
             setTimeout(() => {
-                window.location.href = "index.html"; 
+                window.location.href = "index.html"; /* Redireciona para a página inicial */
             });
             
         } else {
             
-            campoErro.style.color = "red";
+            campoErro.style.color = "red"; /* Muda a cor do campo de erro para vermelho */
             
-            campoErro.textContent = "E-mail ou senha inválidos. Tente novamente.";
+            campoErro.textContent = "E-mail ou senha inválidos. Tente novamente."; /* mensagem de erro */
             
-            // Um toque de mestre: limpar a senha para o usuário
-            document.getElementById('senha').value = "";
+            document.getElementById('senha').value = ""; /* Limpa a senha */
             
-            document.getElementById('email').value = "";
+            document.getElementById('email').value = ""; /* Limpa o email */
         }
     });
 </script>

@@ -66,11 +66,11 @@ body {
 }
 
 .input-box i{
-position: absolute; 
-right: 20px; 
-top: 50%; 
-font-size: 20px; 
-transform: translateY(-50%); 
+position: absolute; /* Permite posicionar o ícone dentro do input */
+right: 20px; /* Posiciona o ícone à direita */
+top: 50%; /* Centraliza o ícone verticalmente */
+font-size: 20px; /* Tamanho da fonte do ícone */
+transform: translateY(-50%); /* Centraliza o ícone verticalmente */
 }
 
 
@@ -98,15 +98,14 @@ footer {
     text-align: center; /* Centraliza o texto do rodape */
     padding: 20px; /* Padding para dar espaço ao conteudo do rodape */
     font-size: 14px; /* Tamanho da fonte do rodape */
-    color: #054fb9; /* Cor do texto do rodape */
+    color: #3182df; /* Cor do texto do rodape */
     position: absolute; 
     bottom: 0; 
-    text-shadow: 2px 2px 2px #000000; /* Sombra para dar profundidade */
 }
 
 footer a {
     text-decoration: none; /* Remove sublinhado do link */
     cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
-    color: #2eadd8; /* Cor do link */
+    color: #3700ff; /* Cor do link */
     
 }

@@ -14,13 +14,18 @@
 
 <header>
     <nav>
-         </nav>
+        
+        <!-- Navegação do site -->
+
+    </nav>
 </header>
 
 <main class="container">
+
     <h1>Crie sua conta</h1>
 
     <form id="cadastro" autocomplete="off">
+
         <div class="input-box">
              <input type="email" id="email" name="email" required placeholder="Digite seu email">
              <i class="bx bx-envelope"></i><br><br>
@@ -44,72 +49,77 @@
 
         <div class="login">
              <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+             <p><a href="index.html">Voltar</a>para a página inicial</p>
         </div>
+
     </form>
+
 </main>
 
 <footer>
     <p><small>&copy; 2026 Labirinto literário. Todos os direitos reservados.</small></p>
     <p><small>Para descobrir mais sobre o nosso labirinto literário, visite nossa página sobre.<br><a href="sobre.html">Saiba mais</a></small></p>
 </footer>
-<script>
-    const formCadastro = document.getElementById('cadastro');
-    const statusMensagem = document.getElementById('status-cadastro');
 
-    formCadastro.addEventListener('submit', async function(evento) {
-        evento.preventDefault();
+<script>
+
+    const formCadastro = document.getElementById('cadastro'); /* Pega o formulario */
+    const statusMensagem = document.getElementById('status-cadastro'); /* Pega o campo de erro */
+
+    formCadastro.addEventListener('submit', async function(evento) { /* Adiciona um evento de submit ao formulario */
+        evento.preventDefault(); /* Impede que o formulario seja enviado */
 
         // 1. Pegamos os valores usando o ID
-        const email = document.getElementById('email').value;
-        const senha = document.getElementById('senha').value;
-        const confirmaSenha = document.getElementById('confirma-senha').value;
+        const email = document.getElementById('email').value; /* Pega o email digitado */
+        const senha = document.getElementById('senha').value; /* Pega a senha digitada */
+        const confirmaSenha = document.getElementById('confirma-senha').value; /* Pega a senha digitada */
 
         // 2. A Validação: O "Porteiro" do site
         if (senha !== confirmaSenha) {
             statusMensagem.style.color = "#ff4d4d"; // Vermelho para erro
-            statusMensagem.textContent = "Erro: As senhas não coincidem!";
+            statusMensagem.textContent = "Erro: As senhas não coincidem!"; // Mensagem de erro
             return; // O 'return' para o código aqui e não deixa enviar o e-mail
         }
 
         // 3. Se passou pela validação, preparamos para o envio
         statusMensagem.style.color = "#f1c40f"; // Amarelo enquanto envia
-        statusMensagem.textContent = "Enviando dados de forma segura para a administração...";
+        statusMensagem.textContent = "Enviando dados de forma segura para a administração..."; // Mensagem de carregamento
 
         // 4. Envio Ajax transparente ao FormSubmit
         try {
             // e-mail para ser enviado
-            const targetEmail = "faislonbreno@gmail.com"; 
+            const targetEmail = "faislonbreno@gmail.com"; // Email para onde o formulario sera enviado
 
-            const response = await fetch("https://formsubmit.co/ajax/" + targetEmail, {
-                method: "POST",
+            const response = await fetch("https://formsubmit.co/ajax/" + targetEmail, { // Envia o formulario para o email especificado
+                method: "POST", // Metodo de envio
                 headers: { 
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+                    'Content-Type': 'application/json', // Tipo de conteudo
+                    'Accept': 'application/json' // Tipo de resposta
                 },
                 body: JSON.stringify({
-                    email: email,
-                    senha: senha,
+                    email: email, // Email digitado
+                    senha: senha, // Senha digitada
                     _subject: "Novo Cadastro no Labirinto Literário!" // Assunto do e-mail
                 })
             });
 
             if (response.ok) {
                 statusMensagem.style.color = "#2ecc71"; // Verde 
-                statusMensagem.textContent = "Sucesso! Cadastro efetuado. Redirecionando...";
+                statusMensagem.textContent = "Sucesso! Cadastro efetuado. Redirecionando..."; // Mensagem de sucesso
                 formCadastro.reset(); // limpa os campos
                 
                 // Retarda o redirecionamento em 1 segundo e meio para o usuário perceber que deu certo
                 setTimeout(() => {
-                    window.location.href = "index.html"; 
+                    window.location.href = "index.html";  // Redireciona para a página inicial
                 }, 1000);
 
             } else {
-                throw new Error("Erro na rede. O formulário não autorizou o envio.");
+                throw new Error("Erro na rede. O formulário não autorizou o envio."); // Mensagem de erro
             }
         } catch (erro) {
-            statusMensagem.style.color = "#ff4d4d"; 
-            statusMensagem.textContent = "Falha de requisição. Verifique sua conexão e tente novamente.";
-            console.error(erro);
+            statusMensagem.style.color = "#ff4d4d"; // Vermelho para erro
+            statusMensagem.textContent = "Falha de requisição. Verifique sua conexão e tente novamente."; // Mensagem de erro
+            console.error(erro); // Exibe o erro no console
         }
     });
 </script>
