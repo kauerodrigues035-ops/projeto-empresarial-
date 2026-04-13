@@ -140,3 +140,116 @@ footer a {
         max-width: 300px;
     }
 }
+
+.container {
+    text-align: center;
+    color: #edc54d;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+    text-shadow: 1px 10px 0px #000000;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    /* A imagem corta as laterais mas mantém a proporção */
+    object-position: center;
+    /* Mantém o centro da imagem sempre visível */
+    display: block;
+}
+
+#ft-perfil {
+    border-radius: 80%;
+margin: 10px;
+    width: 30%;
+border: 2px solid gold;
+box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.lateral {
+    background-color:#1A1A1A;
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    left: -274px;
+    z-index: 1000;
+    transition: 0.5s;
+    border-radius: 3px;
+    text-align: center;
+    color: rgb(104, 51, 165);
+    border: solid, 1px gold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    padding-top: 60px;
+}
+
+.lateral p  {
+    font-size: x-small;
+    margin: 10px;
+   
+}
+
+.lateral h3{
+    color: gold;
+    text-shadow: none;
+}
+.lateral ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.lateral a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #BFBFBF;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+    transition: 0.3s;
+}
+
+.lateral a:hover {
+    color: gold;
+  background-color: rgb(255, 255, 255,0.05);
+    transition: all, 0.5s;
+    padding: 15px;
+}
+
+.lateral.active {
+    left: 0%;
+    
+}
+
+.menu-butao {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.5s;
+}
+       
