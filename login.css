@@ -19,145 +19,6 @@ body {
 
 }
 
-
-/* Estilo do Conteudo Principal */
-
-.container {
-    max-width: 420px;  /* Largura da caixa */
-    background: transparent; /* Fundo transparente para mostrar a imagem de fundo */
-    border-radius: 10px; /* Bordas arredondadas */
-    border:2px solid rgba(255, 255, 255, .5); /* Cor da borda com transparência */
-    padding: 30px 40px; /* Espaçamento interno */
-    color: white; /* Cor do texto */
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /* Sombra para dar profundidade */
-    
-}
-
-.container h1 {
-    font-size: 36px;  /* Tamanho da fonte do título */
-    text-align: center;  /* Centraliza o título */
-    
-}
-
-
-.input-box {
-    position: relative; /* Permite posicionar o ícone dentro do input */
-    margin: 30px 0; /* Espaçamento entre os inputs */
-    height: 50px; /* Altura do input */
-    width: 100%; /* O container do input ocupa toda a largura disponível */
-}
-
-
-.input-box input {
- width: 100%; /* O input ocupa toda a largura do container */
- height: 100%; /* O input ocupa toda a altura do container */
- background-color: transparent; /* Fundo transparente para mostrar a imagem de fundo */
- border: 2px solid rgba(255, 255, 255, .5); /* Cor da borda com transparência */
- border-radius: 40px; /* Bordas arredondadas */
- outline: none; /* Remove o contorno padrão ao focar */
- font-size: 16px; /* Tamanho da fonte do input */
- color: white; /* Cor do texto do input */
- padding: 20px 45px 20px 20px; /* Espaçamento interno do input, com espaço para o ícone */
-
-}
-
-.input-box input::placeholder {
-    color: rgba(255, 255, 255, .9); /* Cor do placeholder */
-}
-
-.input-box i{
-position: absolute; /* Permite posicionar o ícone dentro do input */
-right: 20px; /* Posiciona o ícone à direita */
-top: 50%; /* Centraliza o ícone verticalmente */
-font-size: 20px; /* Tamanho da fonte do ícone */
-transform: translateY(-50%); /* Centraliza o ícone verticalmente */
-
-}
-
-.lembrar-senha input{
-    accent-color: white; /* Cor do checkbox */
-    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
-    margin: 5px; /* Espaçamento entre o checkbox e o texto */
-    
-}
-
-#entrar {
-    width: 100%; /* O botão ocupa toda a largura do container */
-    padding: 15px; /* Espaçamento interno do botão */
-    background-color: #0073ff; /* Cor do botão */
-    border: none; /* Remove a borda */
-    border-radius: 40px; /* Bordas arredondadas */
-    color: white; /* Cor do texto do botão */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
-}
-
-.cadastro a{
-    color: #3700ff; /* Cor do link */
-    text-decoration: none; /* Remove sublinhado do link */     
-    margin: 5px; /* Espaçamento entre o link e o texto */
-}
-
-/* Estilo do Rodape */
-
-footer {
-    text-align: center; /* Centraliza o texto do rodape */
-    padding: 20px; /* Padding para dar espaço ao conteudo do rodape */
-    font-size: 14px; /* Tamanho da fonte do rodape */
-    color: #3182df; /* Cor do texto do rodape */
-    position: absolute; 
-    bottom: 0; 
-    
-   
-    
-}
-
-footer a {
-    text-decoration: none; /* Remove sublinhado do link */
-    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
-    color: #3700ff; /* Cor do link */
-
-}
-/* 6. RESPONSIVIDADE (MEDIA QUERIES) para Celulares */
-@media (max-width: 900px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        margin: 20px auto;
-        gap: 30px;
-    }
-    
-    .info-principal {
-        text-align: center;
-    }
-    
-    #sinopse {
-        text-align: center;
-    }
-
-    .botoes {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-.container {
-    text-align: center;
-    color: #edc54d;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 20px;
-  letter-spacing: 2px;
-    text-shadow: 1px 10px 0px #000000;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    object-fit: cover;
-    /* A imagem corta as laterais mas mantém a proporção */
-    object-position: center;
-    /* Mantém o centro da imagem sempre visível */
-    display: block;
-}
-
 #ft-perfil {
     border-radius: 80%;
 margin: 10px;
@@ -252,4 +113,130 @@ box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
     pointer-events: auto;
     transition: 0.5s;
 }
-       
+
+
+/* Estilo do Conteudo Principal */
+
+.container {
+    max-width: 420px;  /* Largura da caixa */
+    background: transparent; /* Fundo transparente para mostrar a imagem de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    border:2px solid rgba(255, 255, 255, .5); /* Cor da borda com transparência */
+    padding: 30px 40px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /* Sombra para dar profundidade */
+    
+}
+
+.container h1 {
+    font-size: 36px;  /* Tamanho da fonte do título */
+    text-align: center;  /* Centraliza o título */
+    
+}
+
+
+.input-box {
+    position: relative; /* Permite posicionar o ícone dentro do input */
+    margin: 30px 0; /* Espaçamento entre os inputs */
+    height: 50px; /* Altura do input */
+    width: 100%; /* O container do input ocupa toda a largura disponível */
+}
+
+
+.input-box input {
+ width: 100%; /* O input ocupa toda a largura do container */
+ height: 100%; /* O input ocupa toda a altura do container */
+ background-color: transparent; /* Fundo transparente para mostrar a imagem de fundo */
+ border: 2px solid rgba(255, 255, 255, .5); /* Cor da borda com transparência */
+ border-radius: 40px; /* Bordas arredondadas */
+ outline: none; /* Remove o contorno padrão ao focar */
+ font-size: 16px; /* Tamanho da fonte do input */
+ color: white; /* Cor do texto do input */
+ padding: 20px 45px 20px 20px; /* Espaçamento interno do input, com espaço para o ícone */
+
+}
+
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, .9); /* Cor do placeholder */
+}
+
+.input-box i{
+position: absolute; /* Permite posicionar o ícone dentro do input */
+right: 20px; /* Posiciona o ícone à direita */
+top: 50%; /* Centraliza o ícone verticalmente */
+font-size: 20px; /* Tamanho da fonte do ícone */
+transform: translateY(-50%); /* Centraliza o ícone verticalmente */
+
+}
+
+.lembrar-senha input{
+    accent-color: white; /* Cor do checkbox */
+    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
+    margin: 5px; /* Espaçamento entre o checkbox e o texto */
+    
+}
+
+#entrar {
+    width: 100%; /* O botão ocupa toda a largura do container */
+    padding: 15px; /* Espaçamento interno do botão */
+    background-color: #0073ff; /* Cor do botão */
+    border: none; /* Remove a borda */
+    border-radius: 40px; /* Bordas arredondadas */
+    color: white; /* Cor do texto do botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
+}
+
+.cadastro{
+    text-align: center;
+    padding: 10px;
+}
+
+.cadastro a{
+    color: #3700ff; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado do link */     
+    margin: 5px; /* Espaçamento entre o link e o texto */
+}
+
+/* Estilo do Rodape */
+
+footer {
+    text-align: center; /* Centraliza o texto do rodape */
+    padding: 20px; /* Padding para dar espaço ao conteudo do rodape */
+    font-size: 14px; /* Tamanho da fonte do rodape */
+    color: #3182df; /* Cor do texto do rodape */
+    position: absolute; 
+    bottom: 0; 
+    
+   
+    
+}
+
+footer a {
+    text-decoration: none; /* Remove sublinhado do link */
+    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
+    color: #3700ff; /* Cor do link */
+
+}
+/* 6. RESPONSIVIDADE (MEDIA QUERIES) para Celulares */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto;
+        gap: 30px;
+    }
+    
+    .info-principal {
+        text-align: center;
+    }
+    
+    #sinopse {
+        text-align: center;
+    }
+
+    .botoes {
+        width: 100%;
+        max-width: 300px;
+    }
+}
