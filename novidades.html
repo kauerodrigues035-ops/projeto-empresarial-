@@ -30,7 +30,7 @@
             font-family: Arial, Helvetica, sans-serif
         }
 
-        hr {
+        #hr {
             border: none;
             height: 1px;
             background-color: #333;
@@ -170,40 +170,60 @@
             }
         }
       
-        .container {
+         
+
+.container {
     text-align: center;
-    color: rgb(254, 254, 254);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 4px #000000;
-    background-image: url(imagens/banner.png);
+    color: #edc54d;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+    text-shadow: 1px 10px 0px #000000;
     background-size: 100% 100%;
-height: 220px;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    /* A imagem corta as laterais mas mantém a proporção */
+    object-position: center;
+    /* Mantém o centro da imagem sempre visível */
+    display: block;
 }
 
+#ft-perfil {
+    border-radius: 80%;
+margin: 10px;
+    width: 30%;
+border: 2px solid gold;
+box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
 
 .lateral {
-    background-color: rgb(42, 37, 37);
+    background-color:#1A1A1A;
     position: fixed;
     height: 100vh;
     width: 250px;
-    left: -260px;
+    left: -274px;
     z-index: 1000;
     transition: 0.5s;
     border-radius: 3px;
     text-align: center;
-    margin-top: 125px;
-    color: gold;
-    border: solid, 4px;
+    color: rgb(104, 51, 165);
+    border: solid, 1px gold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
-    font-weight: bold;
+    padding-top: 60px;
 }
 
-.lateral p {
+.lateral p  {
     font-size: x-small;
-    display: grid;
+    margin: 10px;
+   
 }
 
+.lateral h3{
+    color: gold;
+    text-shadow: none;
+}
 .lateral ul {
     list-style: none;
     padding: 0;
@@ -213,20 +233,24 @@ height: 220px;
 .lateral a {
     text-decoration: none;
     background-color: transparent;
-    color: white;
-    border: solid 3px gold;
+    color: #BFBFBF;
+    font-size: 15px;
     padding: 5px;
     border-radius: 5px;
+    display: block;
+    transition: 0.3s;
 }
 
 .lateral a:hover {
     color: gold;
-    background-color: black;
+  background-color: rgb(255, 255, 255,0.05);
     transition: all, 0.5s;
+    padding: 15px;
 }
 
 .lateral.active {
     left: 0%;
+    
 }
 
 .menu-butao {
@@ -237,9 +261,8 @@ height: 220px;
     border: none;
     font-size: 30px;
     cursor: pointer;
-    color: antiquewhite;
+    color: aliceblue;
 }
-
 
 .overlay {
     position: fixed;
@@ -258,10 +281,9 @@ height: 220px;
 .overlay.active {
     opacity: 1;
     pointer-events: auto;
-    transition: 0.3s;
+    transition: 0.5s;
 }
-
-        
+       
     </style>
 </head>
 
@@ -270,10 +292,10 @@ height: 220px;
 
     <nav class="lateral" id="lateral">
         <img id="ft-perfil" src="imagens/perfil.jpg" alt="perfil">
-        <p><a href="">login</a></p>
+        <p><a href="login.html">login</a></p>
         <hr>
-        <h3>menu lateral:</h3>
-        <hr>
+        <h3>Labirinto Literario</h3>
+        
         <ul>
             
               <li><a href="index.html">Inicio</a></li><br>
@@ -316,7 +338,7 @@ height: 220px;
             Agora, essa obra icônica está disponível em nosso site.
 
             Prepare-se para viver essa magia, afinal, algumas histórias nunca envelhecem.</p>
-            <hr>
+             <hr id="hr">
 
         <h3>Harry Potter e a Camara Secreta </h3>
         <h5>Postagem do dia 8 de abril(Quarta-feira)</h5>
@@ -334,7 +356,7 @@ height: 220px;
 
             Agora, essa história incrível já está disponível em nosso site.</p>
 
-            <hr>
+            <hr id="hr">
         <h3> O Hobbit</h3>
         <h5>Postagem do dia 10 de abril(Sexta-feira)</h5>
         <img src="imagens/img_hbt.jpeg" alt="Imagem de O Hobbit" width="300" class="img_hbt">
@@ -349,7 +371,7 @@ height: 220px;
 
             O Hobbit já disponível em nosso site.</p>
             
-            <hr>
+            <hr id="hr">
         <h3> O Senhor dos Aneis: A sociedade do Anel </h3>
         <h5> Postagem do dia 10 de abril(Sexta-feira)</h5>
         <img src="imagens/img_sda1.jpeg" alt="Imagem de O Senhor dos Aneis: A sociedade do anel" width="300"
@@ -365,7 +387,7 @@ height: 220px;
             da perdição na terra sombria de Mordor.
 
             O senhor dos anéis disponível agora em nosso site.</p>
-        <hr>
+        <hr id="hr">
         <h3> Viagem ao centro da terra</h3>
         <h5> Postagem do dia 14 de abril (Terça-feira)</h5>
         <img src="imagens/img_vct.jpeg" alt="Imagem de A viagem ao centro da terra" width="300" class="img_vct">

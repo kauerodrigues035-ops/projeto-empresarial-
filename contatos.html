@@ -28,12 +28,6 @@
         }
 
 
-
-        hr {
-            margin: 20px auto;
-            width: 60%;
-        }
-
         /* IMAGEM */
         .fale_conosco {
             display: block;
@@ -147,38 +141,60 @@
          main {
             height: 10vh;
         }
-    .container2 {
+   
+
+.container2 {
     text-align: center;
-    color: rgb(254, 254, 254);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 4px #000000;
+    color: #edc54d;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+    text-shadow: 1px 10px 0px #000000;
     background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    /* A imagem corta as laterais mas mantém a proporção */
+    object-position: center;
+    /* Mantém o centro da imagem sempre visível */
+    display: block;
 }
 
+#ft-perfil {
+    border-radius: 80%;
+margin: 10px;
+    width: 30%;
+border: 2px solid gold;
+box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
 
 .lateral {
-    background-color: rgb(42, 37, 37);
+    background-color:#1A1A1A;
     position: fixed;
     height: 100vh;
     width: 250px;
-    left: -260px;
+    left: -274px;
     z-index: 1000;
     transition: 0.5s;
     border-radius: 3px;
     text-align: center;
-    margin-top: 125px;
-    color: gold;
-    border: solid, 4px;
+    color: rgb(104, 51, 165);
+    border: solid, 1px gold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
-    font-weight: bold;
+    padding-top: 60px;
 }
 
-.lateral p {
+.lateral p  {
     font-size: x-small;
-    display: grid;
+    margin: 10px;
+   
 }
 
+.lateral h3{
+    color: gold;
+    text-shadow: none;
+}
 .lateral ul {
     list-style: none;
     padding: 0;
@@ -188,20 +204,24 @@
 .lateral a {
     text-decoration: none;
     background-color: transparent;
-    color: white;
-    border: solid 3px gold;
+    color: #BFBFBF;
+    font-size: 15px;
     padding: 5px;
     border-radius: 5px;
+    display: block;
+    transition: 0.3s;
 }
 
 .lateral a:hover {
     color: gold;
-    background-color: black;
+  background-color: rgb(255, 255, 255,0.05);
     transition: all, 0.5s;
+    padding: 15px;
 }
 
 .lateral.active {
     left: 0%;
+    
 }
 
 .menu-butao {
@@ -211,10 +231,9 @@
     background: none;
     border: none;
     font-size: 30px;
-    cursor: pointer; 
-    color:antiquewhite;
+    cursor: pointer;
+    color: aliceblue;
 }
-
 
 .overlay {
     position: fixed;
@@ -233,9 +252,9 @@
 .overlay.active {
     opacity: 1;
     pointer-events: auto;
-    transition: 0.3s;
+    transition: 0.5s;
 }
-
+    
         
     </style>
 </head>
@@ -245,10 +264,10 @@
 
     <nav class="lateral" id="lateral">
         <img id="ft-perfil" src="imagens/perfil.jpg" alt="perfil">
-        <p><a href="">login</a></p>
+        <p><a href="login.html">login</a></p>
         <hr>
-        <h3>menu lateral:</h3>
-        <hr>
+        <br>
+        <h3>Labirinto Literario</h3>
         <ul>
             <br>
               <li><a href="index.html">Inicio</a></li><br>
