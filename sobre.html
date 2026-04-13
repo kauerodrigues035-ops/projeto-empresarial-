@@ -1,31 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sobre</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #0d0d0d);
+      color: #f1f5f9;
+      line-height: 1.6;
+      background-image: url("fundo.jpg");
+      
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #cbd5f5;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #f7f8fa;
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .member {
+      background: #27334f;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .member:hover {
+      background: #334155;
+    }
+
+    .member h3 {
+      margin-bottom: 5px;
+      color: #f8fafc;
+    }
+
+    .member p {
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+    .imagem{
+    border: 3px solid rgb(50, 61, 144);
+            border-radius: 15px;
+            display: block;
+            margin: auto;
+            box-shadow: 0px 5px 15px rgb(8, 8, 8);
+    }
+  </style>
 </head>
 
 <body>
-    <h1> Sobre o projeto</h1>
-    <p>Conheça a nossa iniciativa de democratizar o acesso ao conhecimento </p>
 
-    <h2> Quem Somos </h2>
-    <p> Somos um grupo de estudantes da Universidade
-        veiga de almeida (UVA), unidos pelo objetivo
-        de tornar a leitura mias fácil e acessível para
-        todos. Nosso projeto nasceu em 2026 com a ideia de disponilizar
-        livros em PDF de forma simples, gratuita e organizada.</p>
+  <header>
+    <h1>Sobre o labirinto literario</h1>
+    <p>Conheça a nossa iniciativa de democratizar o acesso ao conhecimento</p>
+  </header>
 
-    <h2> Nossos Objetivos </h2>
-    <p> Acreditamos que o conhecimento deve ser acessível a todos.
-        Por isso, desenvolvemos esta plataforma para reunir livros gratuitos
-        em PDF, ajudando estudantes, leitores e curiosos a explorarem novos conteúdos
-        sem barreiras.
+  <div class="container">
+
+    <div class="card">
+      <h2>📚 Quem Somos</h2>
+      <p>
+        Somos um grupo de estudantes da Universidade Veiga de Almeida (UVA), unidos pelo objetivo de tornar o acesso à leitura mais fácil e acessível para todos. 
+        Nosso projeto nasceu em 2026 com a ideia de disponibilizar livros em PDF de forma simples, gratuita e organizada.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Nosso Objetivo</h2>
+      <p>
+        Acreditamos que o conhecimento deve ser acessível a todos. Por isso, desenvolvemos esta plataforma para reunir livros gratuitos em PDF, ajudando estudantes, leitores e curiosos a explorarem novos conteúdos sem barreiras.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>👨‍💻 Equipe</h2>
+      <div class="team">
+        <div class="member">
+          <h3>Miguel</h3>
+          <p>Desenvolvedor e idealizador.</p>
+          <img src="fotodomiguel.jpeg" alt="imagem do miguel" width="100" height="100" class="imagem">
+        </div>
+
+        <div class="member">
+          <h3>Breno</h3>
+          <p>Desenvolvedor.</p>
+          <img src="fotodobreno.jpeg" alt="imagem do breno" width="120" height="100" class="imagem">
+        </div>
+
+        <div class="member">
+          <h3>Kaue</h3>
+          <p>Designer, Desenvolvedor.</p>
+          <img src="fotodokaue.jpeg" alt="imagem do kaue" width="100" class="imagem">
+        </div>
+
+        <div class="member">
+          <h3>João</h3>
+          <p>Suporte e conteúdo.</p>
+          <img src="fotodeperfil.jpg" alt="imagem do joão" width="100" class="imagem">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🌍 Visão</h2>
+      <p>
+        Nosso objetivo é crescer a plataforma, expandir o acervo e impactar cada vez mais pessoas, promovendo educação, leitura e desenvolvimento pessoal através da tecnologia.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>
+    &copy; 2026 - Labirinto literario. Todos os direitos reservados.
     </p>
-    <h2> Equipe</h2>
-    
-</body>
+  </footer>
 
+</body>
 </html>

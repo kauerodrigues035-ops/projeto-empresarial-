@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labirinto literário</title>
+    <link rel="icon" href="icone livro.jpg">
+    <link rel="stylesheet" href="livro.css">
+
+</head>
+
+<body>
+
+
+    <main class="container">
+        <aside>
+            <div class="imagens">
+                <img src="hpcamarasecretafrente.jpg" class="ativo" alt="Capa do Livro">
+                <img src="hpcamarasecreta.jpg" alt="Imagem secundária do livro">
+
+                <button id="prev" aria-label="Anterior" style="color: white;">‹</button>
+                <button id="next" aria-label="Próximo" style="color: white;">›</button>
+            </div>
+        </aside>
+
+        <section class="info-principal">
+
+            <h1>Harry Potter e a Câmara Segreta.</h1>
+
+            <p id="JK">Por <small><em>J.K.Rolwing</em></small> (Autor)</p>
+
+            <p>4,8 <span style="color: #FFD700;">★★★★★</span> (255)</p>
+
+            <h3>Sobre o livro</h3>
+
+            <p id="sinopse">Depois de férias aborrecidas na casa dos tios trouxas, está na hora de Harry Potter voltar a estudar. Coisas acontecem, no entanto, para dificultar o regresso de Harry. Persistente e astuto, o herói não se deixa intimidar pelos obstáculos e, com a ajuda dos fiéis amigos Weasley, começa o ano letivo na Escola de Magia e Bruxaria de Hogwarts. As novidades não são poucas. Novos colegas, novos professores, muitas e boas descobertas e um grande e perigosos desafio. Alguém ou alguma coisa ameaça a segurança e a tranquilidade dos membros de Hogwarts.</p>
+
+        </section>
+
+        <div class="botoes">
+
+         <a href="" download=""><button class="btn-baixar">Baixar PDF</button></a>
+         <a href="" download="" target="_blank"><button class="btn-abrir">Abrir PDF</button></a>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <p><small>&copy; 2026 Labirinto literário. Todos os direitos reservados.</small></p>
+        <p><small>Para descobrir mais sobre o nosso labirinto literário, visite nossa página sobre.<br><a href="sobre.html">Saiba mais</a></small></p>
+
+    </footer>
+
+    <script>
+
+        let index = 0;
+        const imagens = document.querySelectorAll(".imagens img");
+        const dots = document.querySelectorAll(".dot");
+
+        function mostrarSlide(i) {
+            imagens.forEach(img => img.classList.remove("ativo"));
+            dots.forEach(dot => dot.classList.remove("ativo"));
+
+            imagens[i].classList.add("ativo");
+            dots[i].classList.add("ativo");
+        }
+
+        document.querySelector("#next").onclick = () => {
+            index = (index + 1) % imagens.length;
+            mostrarSlide(index);
+        };
+
+        document.querySelector("#prev").onclick = () => {
+            index = (index - 1 + imagens.length) % imagens.length;
+            mostrarSlide(index);
+        }
+
+    </script>
+
+</body>
+
+</html>
